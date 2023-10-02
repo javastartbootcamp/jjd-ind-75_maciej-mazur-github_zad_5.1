@@ -28,13 +28,13 @@ public class PointInfoGenerator {
     private String quarterInfo(Point point, int quarterNumber) {
         String romanQuarterNumber = "";
 
-        if (quarterNumber == 1) {
+        if (quarterNumber == LOCATION_QUARTER_1) {
             romanQuarterNumber = "I";
-        } else if (quarterNumber == 2) {
+        } else if (quarterNumber == LOCATION_QUARTER_2) {
             romanQuarterNumber = "II";
-        } else if (quarterNumber == 3) {
+        } else if (quarterNumber == LOCATION_QUARTER_3) {
             romanQuarterNumber = "III";
-        } else if (quarterNumber == 4) {
+        } else if (quarterNumber == LOCATION_QUARTER_4) {
             romanQuarterNumber = "IV";
         }
 
