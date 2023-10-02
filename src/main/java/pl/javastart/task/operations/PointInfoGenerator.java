@@ -17,10 +17,10 @@ public class PointInfoGenerator {
         int quarterAssessment = assessQuarter(x, y);
 
         return switch (quarterAssessment) {
-            case 1, 2, 3, 4 -> quarterInfo(point, quarterAssessment);
-            case 5 -> "Punkt (" + point.getX() + ", " + point.getY() + ") leży na osi X";
-            case 6 -> "Punkt (" + point.getX() + ", " + point.getY() + ") leży na osi Y";
-            case 7 -> "Punkt (" + point.getX() + ", " + point.getY() + ") leży na środku układu współrzędnych";
+            case LOCATION_QUARTER_1, LOCATION_QUARTER_2, LOCATION_QUARTER_3, LOCATION_QUARTER_4 -> quarterInfo(point, quarterAssessment);
+            case LOCATION_AXIS_X -> point.print() + "na osi X";
+            case LOCATION_AXIS_Y -> point.print() + "na osi Y";
+            case LOCATION_CENTER -> point.print() + "na środku układu współrzędnych";
             default -> "Błąd wczytanych współrzędnych";
         };
     }
@@ -38,7 +38,7 @@ public class PointInfoGenerator {
             romanQuarterNumber = "IV";
         }
 
-        return "Punkt (" + point.getX() + ", " + point.getY() + ") leży w " + romanQuarterNumber
+        return point.print() + "w " + romanQuarterNumber
                 + " ćwiartce układu współrzędnych";
     }
 

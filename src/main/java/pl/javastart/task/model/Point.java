@@ -16,4 +16,8 @@ public class Point {
     public int getY() {
         return y;
     }
+
+    public String print() {
+        return "Punkt (" + x + ", " + y + ") leży ";
+    }
 }
